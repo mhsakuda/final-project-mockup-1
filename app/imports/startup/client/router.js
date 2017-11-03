@@ -68,6 +68,22 @@ userRoutes.route('/filter', {
   },
 });
 
+export const postItemPageRouteName = 'Post_Item_Page';
+userRoutes.route('/post-item', {
+  name: postItemPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: postItemPageRouteName });
+  },
+});
+
+export const browsePageRouteName = 'Browse_Page';
+userRoutes.route('/browse', {
+  name: browsePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: browsePageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
